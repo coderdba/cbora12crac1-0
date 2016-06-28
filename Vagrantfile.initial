@@ -43,6 +43,12 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
     config.vm.provider "virtualbox" do |vb|  # node1 customize
 
+      # network
+      # Public IP
+      node.vm.network "private_network", ip: "192.168.0.111", virtualbox__intnet: true
+      # Private Interconnect
+      node.vm.network "private_network", ip: "10.10.10.111", virtualbox__intnet: true
+
       # Disk 1
       file_name='C:\VMDisks\cbora12crac1\asm1.vmdk'
       file_type='vmdk'
@@ -105,6 +111,11 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     node.vm.network "private_network", ip: "10.10.10.112", virtualbox__intnet: true   # private interconnect
 
         config.vm.provider "virtualbox" do |vb|  # node2 customize
+          # Network
+          # Public IP
+          node.vm.network "private_network", ip: "192.168.0.112", virtualbox__intnet: true
+          # Private Interconnect
+          node.vm.network "private_network", ip: "10.10.10.112", virtualbox__intnet: true
 
           # Disk 1
           file_name='C:\VMDisks\cbora12crac1\asm1.vmdk'
