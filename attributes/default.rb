@@ -44,11 +44,15 @@ default['gridHome']['dirPerm']      = '755'
 default['gridBase']['dirPerm']      = '755'
 
 # Cluster Name
-default['clusterName'] = 'rac2'
+default['clusterName'] = 'rac1'
 
 # Host Names
 default['hostnameNode1'] = 'rac1n1'
 default['hostnameNode2'] = 'rac1n2'
+
+# Software staging area
+default['softwareLocation']['grid'] = '/stage-grid'
+default['softwareLocation']['db'] = '/stage-db'
 
 # IP Addresses
 # Public

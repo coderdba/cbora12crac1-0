@@ -28,6 +28,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   #config.vm.box = 'chef/ubuntu-14.04'
   config.vm.box = 'oel72-64-model'
   config.ssh.password = 'vagrant'
+  config.vm.synced_folder  "../../stage/Oracle12c/grid", "/stage-grid"
 
   config.vm.provider "virtualbox" do |vb|  # common for all nodes
     vb.memory = 3072
@@ -98,7 +99,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       #'recipe[cbora12crac1::setup_ssh]'
       #'recipe[cbora12crac1::directories]'
       #'recipe[cbora12crac1::configure_oracleasm]'
-      'recipe[cbora12crac1::prepare_asm_disks]'
+      #'recipe[cbora12crac1::prepare_asm_disks]'
       ]
     end
   end # rac1n1 main
@@ -149,7 +150,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
           chef.run_list = [
           #'recipe[cbora12crac1::default]'
           #'recipe[cbora12crac1::update_etc_hosts]'
-          'recipe[cbora12crac1::directories]'
+          #'recipe[cbora12crac1::directories]'
           ]
         end
   end # rac1n2 main
