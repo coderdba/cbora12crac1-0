@@ -94,9 +94,11 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       chef.run_list = [
       #'recipe[cbora12crac1::default]'
       #'recipe[cbora12crac1::default]','recipe[cbora12crac1::setup_ssh]','recipe[cbora12crac1::users_and_groups]', 'recipe[cbora12crac1::directories]','recipe[cbora12crac1::update_etc_hosts]','recipe[cbora12crac1::configure_oracleasm]','recipe[cbora12crac1::prepare_asm_disks]'
-      'recipe[cbora12crac1::setup_ssh]'
-      #'recipe[cbora12crac1::directories]','recipe[cbora12crac1::update_etc_hosts]'
-      #'recipe[cbora12crac1::configure_oracleasm]','recipe[cbora12crac1::prepare_asm_disks]'
+      #'recipe[cbora12crac1::update_etc_hosts]'
+      #'recipe[cbora12crac1::setup_ssh]'
+      #'recipe[cbora12crac1::directories]'
+      #'recipe[cbora12crac1::configure_oracleasm]'
+      'recipe[cbora12crac1::prepare_asm_disks]'
       ]
     end
   end # rac1n1 main
@@ -145,7 +147,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
         node.vm.provision :chef_solo do |chef|
           chef.run_list = [
-          'recipe[cbora12crac1::default]'
+          #'recipe[cbora12crac1::default]'
+          #'recipe[cbora12crac1::update_etc_hosts]'
+          'recipe[cbora12crac1::directories]'
           ]
         end
   end # rac1n2 main

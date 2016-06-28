@@ -72,9 +72,9 @@ default['scanIp3'] = '192.168.0.133'
 default['hostsFile'] = '/etc/hosts'
 
 # Disks
-default['diskDev1'] = '/dev/sdc'
-default['diskDev2'] = '/dev/sdd'
-default['diskDev3'] = '/dev/sde'
+default['diskDev1'] = '/dev/sdb'
+default['diskDev2'] = '/dev/sdc'
+default['diskDev3'] = '/dev/sdd'
 
 # fdisk format file
 default['sfdisk2gb_format_file']      = '/tmp/sfdisk_2gb.format'
