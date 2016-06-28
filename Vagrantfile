@@ -151,6 +151,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
           #'recipe[cbora12crac1::default]'
           #'recipe[cbora12crac1::update_etc_hosts]'
           #'recipe[cbora12crac1::directories]'
+          'recipe[cbora12crac1::setup_ssh]'
           ]
         end
   end # rac1n2 main
