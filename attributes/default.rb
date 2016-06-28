@@ -19,25 +19,26 @@ default['oraclePasswordHash'] = ''
 default['rootPassword']   = 'root'
 
 # Directories
-default['oraAppBase']['dirName']    = '/u01/app'
+default['oraBase']['rootDir']    = '/u01'
+default['oraBase']['dirName']    = '/u01/app'
 default['oraInventory']['dirName']  = '/u01/app/oraInventory'
 default['gridHome']['dirName']      = '/u01/app/gridhome12c'
 default['gridBase']['dirName']      = '/u01/app/gridbase'
 
 # Directory Ownership
-default['oraAppBase']['dirOwner']     = 'oracle'
+default['oraBase']['dirOwner']     = 'oracle'
 default['oraInventory']['dirOwner']   = 'oracle'
 default['gridHome']['dirOwner']       = 'oracle'
 default['gridBase']['dirOwner']       = 'oracle'
 
 # Directory Group
-default['oraAppBase']['dirGroup']     = 'dba'
+default['oraBase']['dirGroup']     = 'dba'
 default['oraInventory']['dirGroup']   = 'dba'
 default['gridHome']['dirGroup']       = 'dba'
 default['gridBase']['dirGroup']       = 'dba'
 
 # Directory Permission
-default['oraAppBase']['dirPerm']    = '755'
+default['oraBase']['dirPerm']    = '755'
 default['oraInventory']['dirPerm']  = '755'
 default['gridHome']['dirPerm']      = '755'
 default['gridBase']['dirPerm']      = '755'

@@ -9,12 +9,6 @@
 #  CAUTION - UNDERSTAND THIS CORRETLY AND REWRITE.  IT IS MESSING UP AND NOT REALLY SETTING THE PASSWORD TO WHAT WE WANTED
 #
 
-# NOTE - User oracle and groups dba and oinstall may be already created in the VM during os or prerequisite install
-#user node[:gridUser] do
-  ## User is already there in the 'racattack' box - just change the password
-  #password node[:oraclePassword]
-#end
-
 dbUser=node[:dbUser]
 groupToUse=node[:oinstallGroup]
 oraclePassword=node[:oraclePassword]
